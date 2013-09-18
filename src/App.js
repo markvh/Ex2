@@ -11,9 +11,9 @@ Ext.define('CustomApp', {
                         types: ['User Story', 'Defect'],
                         attribute: "ScheduleState",
                         cardConfig:{
-                            xtype: 'customcard',
+                            xtype: 'customcard'
                             //cls defines the "stylesheet"
-                            cls:"Panda"
+                        
                             }
                     };
             

@@ -7,8 +7,14 @@ Ext.define('App.MyCard', {
 
     //This record will have the data for the Rally Artifact when the card is created.
     record:null,
-
+    inheritableStatics: {
+        //This list of fields you expect hydrated in the records. This information is passed along to the Rally server and assures that
+        getFetchFields: function() {
+            return ['Owner', 'FormattedID', 'Blocked', 'Ready', 'Name', 'Tags', 'DisplayColor',"Parent"];
+        }
+    },
     initComponent:function(){
+        console.log(this.record.get("Parent"));
         
         this.callParent(arguments);
     }
