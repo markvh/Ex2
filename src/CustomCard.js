@@ -14,8 +14,10 @@ Ext.define('App.MyCard', {
         }
     },
     initComponent:function(){
-        console.log(this.record.get("Parent"));
         
+        if(this.record.get("Parent")){
+        this.addCls ( "parented" );    
+        }
         this.callParent(arguments);
     }
 });
